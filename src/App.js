@@ -88,25 +88,27 @@ const App = () => {
           </FormControl>
         </div>
 
-        <div className="box3">
-          <Info className="box01"
-            title="CoronaVirus Case"
-            cases={countryInfo.todayCases}
-            total={countryInfo.cases} />
+        
+          <div className="box3">
+            <Info className="box01"
+              title="Corona Case"
+              cases={countryInfo.todayCases}
+              total={countryInfo.cases} />
 
-          <Info
-            title="Recovered"
-            cases={countryInfo.todayRecovered}
-            total={countryInfo.recovered} />
+            <Info className="box01"
+              title="Recover case"
+              cases={countryInfo.todayRecovered}
+              total={countryInfo.recovered} />
 
-          <Info
-            title="Deaths"
-            cases={countryInfo.todayDeaths}
-            total={countryInfo.deaths} />
-        </div>
+            <Info className="box01"
+              title="Deaths case"
+              cases={countryInfo.todayDeaths}
+              total={countryInfo.deaths} />
+          </div>
+     
 
         <div>
-        {  <Map eventData={eventData} /> }
+          {<Map eventData={eventData} />}
         </div>
 
         {/* <Map /> */}
@@ -114,13 +116,6 @@ const App = () => {
         <div>
           <Graph casesType={casesType} />
         </div>
-
-        {/* <div>
-          <Card >
-            <CardContent>
-            </CardContent>
-          </Card>
-        </div> */}
 
       </div>
 
